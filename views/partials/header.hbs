@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Τίτλος Ιστοσελίδας</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+<!--NAVBAR-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
+		<div class="container-fluid">
+		  <a class="navbar-brand fs-3 text-light" href="home">ART GALLERY</a>
+		  <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		 
+		  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown">
+					<button class="nav-link dropdown-toggle fs-4 text-light" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Exhibitions</button>
+						<ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink1">
+					 		<li><a class="nav-item fs-4 text-light " href="perma">Permanent</a></li>
+					  		<li><a class="nav-item fs-4 text-light" href="temp">Temporary</a></li>
+					  		<li><a class="nav-item fs-4 text-light" href="archive">Archive</a></li>
+						</ul>
+				</li>
+				<li class="nav-item dropdown">
+					<button class="nav-link dropdown-toggle fs-4 text-light" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Collection	
+					</button>
+					<ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink2">
+						<li><a class="nav-item fs-4 text-light" href="collect">Paintings</a></li>
+					  	<li><a class="nav-item fs-4 text-light" href="artists">Artists</a></li>
+					</ul>
+			  	</li>
+			  	<li class="nav-item">
+					<a class="nav-link fs-4 text-light" href="/collabs">Collaborations</a>
+			  	</li>
+				{{#unless isLoggedIn}}
+				<li class="nav-item">
+					<a class="nav-link fs-4 text-light" href="/login">Login</a>
+				</li>
+				{{/unless}}
+				{{#if isLoggedIn}}
+				<li class="nav-item">
+					<a class="nav-link fs-4 text-light" href="/logout">Logout</a>
+				</li>
+				{{/if}}
+
+			</ul>
+		  </div>
+		</div>
+	</nav>
+
+    </header>

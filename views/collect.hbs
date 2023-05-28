@@ -1,0 +1,54 @@
+		<main>
+		<script src="Temporary.js" defer></script>
+		<div class="container my-5">
+		  <h2>Paintings of the Collection</h2>
+
+		        {{#if isLoggedIn}}
+
+                	<form action="/createArt" method="POST">
+                    <input type="text" name="Title" placeholder="Title" required>
+                    <input type="text" name="Creationyear" placeholder="Year of Creation" required>
+                    <input type="text" name="ArtPeriod_name" placeholder="Art Period" required>
+                    <input type="text" name="Name" placeholder="Artists Name" required>
+                    <input type="text" name="Surname" placeholder="Artists Surname" required>
+					<label for="Painting">Permanent:</label>
+					<select id="Temp" name="Temp">
+ 					<option value="Permanent">Yes</option>
+  					<option value="Temporary">No</option>
+					</select>
+					<div id="choice" style="display:none;">
+					<input type="Date" name="LoanStart" placeholder="">
+                    <input type="Date" name="LoanEnd" placeholder="" >
+                    <input type="Text" name="OriginName" placeholder="Collaboration" >
+					</div>
+					<button type="submit">Submit</button>
+
+                    </form>
+					<form action="/upload" method="POST" enctype="multipart/form-data">
+  					<input type="file" name="image" accept="image/jpeg">
+					</form>
+					<form action="/deleteArt" method="POST">
+					<input type="text" name="Title" placeholder="Title" required>
+					<button type="submit">Delete</button>
+					</form>
+				{{/if}}
+
+		  <div class="row">
+				{{#each pain}}
+					<div class="col-md-6 col-lg-4 my-3">	
+					<div class="card">
+					<img src="./img/{{{artid}}}.jpg" style="width: 415px; height: 250px;" class="card-img-top" alt="...">
+					<div class="card-body">
+					<h5 class="card-title">{{{Title}}}</h5>
+				 	<p class="card-text">Art period: {{{ArtPeriod_name}}}</p>	
+					<p class="card-text">Creation year: {{{Creationyear}}}</p>
+					<p class="card-text">Artist: {{{Name}}} {{{Surname}}}</p>
+					</div>
+					</div>
+					</div>
+			
+				{{/each}}
+				</div>
+				</div>
+				  
+					</main>

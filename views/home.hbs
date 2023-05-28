@@ -1,0 +1,67 @@
+<!-- home.hbs -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Art Gallery</title>
+</head>
+<body>
+    <!--CAROUSEL-->
+	<div id="carouselExampleControls" class="carousel slide row" data-bs-ride="carousel">
+		<div class="carousel-inner">
+		  <div class="carousel-item active">
+			<div class="row">
+			  <div class="col-md-4">
+				<img src="./img/4.jpg" class="d-block w-100 h-100 col-4" alt="Slide 1">
+			  </div>
+			  <div class="col-md-4">
+				<img src="./img/10.jpg" class="d-block w-100 h-100 col-4" alt="Slide 2">
+			  </div>
+			  <div class="col-md-4">
+				<img src="./img/6.jpg" class="d-block w-100 h-100 col-4" alt="Slide 3">
+			  </div>
+			</div>
+		  </div>
+		  <div class="carousel-item">
+			<div class="row">
+			  <div class="col-md-4">
+				<img src="./img/8.jpg" class="d-block w-100 h-100" alt="Slide 4">
+			  </div>
+			  <div class="col-md-4">
+				<img src="./img/3.jpg" class="d-block w-100 h-100" alt="Slide 5">
+			  </div>
+			  <div class="col-md-4">
+				<img src="./img/9.jpg" class="d-block w-100 h-100" alt="Slide 6">
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Next</span>
+		</button>
+	  </div>
+<!--CAROUSEL END-->
+<marquee class="css2" direction="right" behavior="alternate" ><b>A WORLD FULL OF ART</b></marquee>
+<!--CONTENT-->
+	  <section class="content">
+		<div class="container">
+		<h1>Welcome to the Art Gallery</h1>
+		<p>An art gallery that is solely dedicated to showcasing art is a space where visitors can come to appreciate and engage with works of art in a purely aesthetic sense. These types of galleries are focused on creating an environment where visitors can view and experience art without the pressure to buy or trade works of art. Exhibitions in such galleries may include paintings, sculptures, photographs, mixed media installations, and other forms of visual art. The gallery may showcase works by established artists, emerging artists, or a combination of both. </p>
+		<p>The exhibitions may rotate periodically, providing visitors with new and exciting experiences. Visitors to such galleries may be able to attend exhibitions, view works in the gallery's permanent collection, and attend special events such as artist talks, workshops, or other educational programs. Overall, an art gallery dedicated to showcasing art provides an opportunity for visitors to engage with art on a deeper level, appreciate its beauty, and gain a greater understanding and appreciation of different styles, mediums, and techniques.</p>
+		</div>
+	</section>
+
+    {{#if isLoggedIn}}
+        
+        <!-- Πρόσθεση επιλογών διαχείρισης εδώ -->
+    {{else}}
+        
+        <!-- Περιεχόμενο για guest εδώ -->
+    {{/if}}
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="style.css">
+		<main>
+
+		<div class="container my-5">
+		  <h2>Artists</h2>
+		  <div class="row">
+            {{{search}}}
+
+        		{{#if isLoggedIn}}
+                <form action="/createArtist" method="POST">
+                    <input type="text" name="Name" placeholder="Name" required>
+                    <input type="text" name="Surname" placeholder="Surname" required>
+                    <input type="text" name="Nationality" placeholder="Nationality" required>
+                    <textarea name="Description" placeholder="Description"></textarea>
+                    <button type="submit">Submit</button>
+					<br>
+					</form>
+					<form action="/deleteArtist" method="POST">
+                    <input type="text" name="Name" placeholder="Name" required>
+                    <input type="text" name="Surname" placeholder="Surname" required>
+                    <button type="submit">delete</button>
+                    </form>
+				{{/if}}
+
+				{{#each artist}}
+					<div class="col-md-6 col-lg-4 my-3">	
+					<div class="card">
+					<h5 class="card-title">{{{Name}}} {{{Surname}}}</h5>
+					<div class="card-body-2">{{{Description}}}
+					</div>
+					</div>
+					</div>
+			
+				{{/each}}
+				</div>
+				</div>
+
+
+					</main>

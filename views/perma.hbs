@@ -1,0 +1,24 @@
+		<main>
+
+		<div class="container my-5">
+		  <h2>Paintings Always Displayed</h2>
+
+		  <div class="row">
+				{{#each perma}}
+					<div class="col-md-6 col-lg-4 my-3">	
+					<div class="card">
+					<img src="./img/{{{artid}}}.jpg" style="width: 415px; height: 250px;"  class="card-img-top" alt="...">
+					<div class="card-body">
+					<h5 class="card-title">{{{Title}}}</h5>
+				 	<p class="card-text">Art period: {{{ArtPeriod_name}}}</p>	
+					<p class="card-text">Creation year: {{{Creationyear}}}</p>
+					<p class="card-text">Artist: {{{Name}}} {{{Surname}}}</p>
+					</div>
+					</div>
+					</div>
+			
+				{{/each}}
+				</div>
+				</div>
+				  
+					</main>
